@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\KubaShop.Order.Application\KubaShop.Order.Application.csproj" />
+    <ProjectReference Include="..\..\Core\KubaShop.Order.Domain\KubaShop.Order.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\KubaShop.Order.Persistence\KubaShop.Order.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
