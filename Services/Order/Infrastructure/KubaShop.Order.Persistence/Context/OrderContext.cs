@@ -13,7 +13,7 @@ namespace KubaShop.Order.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=...;initial Catalog=KubaShopOrderDb;integrated Security=true;");
+            optionsBuilder.UseSqlServer("Server=localhost,1440;initial Catalog=KubaShopOrderDb; User=sa;Password=622622aA.");
         }
         public DbSet<Ordering> Orderings { get; set; }
         public DbSet<Address> Addresses { get; set; }

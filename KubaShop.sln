@@ -21,13 +21,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{496AEC9C-B704-43D9-AC7E-EB53F2BCE52D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubaShop.Order.Domain", "Services\Order\Core\KubaShop.Order.Domain\KubaShop.Order.Domain.csproj", "{F1457E8D-36A0-4ED6-9F45-27B4F33D548F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubaShop.Order.Domain", "Services\Order\Core\KubaShop.Order.Domain\KubaShop.Order.Domain.csproj", "{F1457E8D-36A0-4ED6-9F45-27B4F33D548F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubaShop.Order.Application", "Services\Order\Core\KubaShop.Order.Application\KubaShop.Order.Application.csproj", "{5A143540-9411-4669-83B7-C980C577D62A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubaShop.Order.Application", "Services\Order\Core\KubaShop.Order.Application\KubaShop.Order.Application.csproj", "{5A143540-9411-4669-83B7-C980C577D62A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubaShop.Order.Persistence", "Services\Order\Infrastructure\KubaShop.Order.Persistence\KubaShop.Order.Persistence.csproj", "{5758F53A-BFCC-4323-B7BC-81D5DFE6C29C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubaShop.Order.Persistence", "Services\Order\Infrastructure\KubaShop.Order.Persistence\KubaShop.Order.Persistence.csproj", "{5758F53A-BFCC-4323-B7BC-81D5DFE6C29C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubaShop.Order.WebApi", "Services\Order\Presentation\KubaShop.Order.WebApi\KubaShop.Order.WebApi.csproj", "{B7683B52-B213-41B6-83ED-D8DDEB6BF1C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubaShop.Order.WebApi", "Services\Order\Presentation\KubaShop.Order.WebApi\KubaShop.Order.WebApi.csproj", "{B7683B52-B213-41B6-83ED-D8DDEB6BF1C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{269C44AB-7C65-489C-8529-E4D93A835020}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubaShop.IdentityServer", "IdentityServer\KubaShop.IdentityServer\KubaShop.IdentityServer.csproj", "{58FF829B-C263-41E0-904D-1814E6688E0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +63,10 @@ Global
 		{B7683B52-B213-41B6-83ED-D8DDEB6BF1C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7683B52-B213-41B6-83ED-D8DDEB6BF1C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7683B52-B213-41B6-83ED-D8DDEB6BF1C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58FF829B-C263-41E0-904D-1814E6688E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58FF829B-C263-41E0-904D-1814E6688E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58FF829B-C263-41E0-904D-1814E6688E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58FF829B-C263-41E0-904D-1814E6688E0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +84,7 @@ Global
 		{5A143540-9411-4669-83B7-C980C577D62A} = {5DD5B6F9-309E-4520-8530-F15C7375F90A}
 		{5758F53A-BFCC-4323-B7BC-81D5DFE6C29C} = {0DA59E5A-9A54-4E3B-AC05-5670EEB83EA9}
 		{B7683B52-B213-41B6-83ED-D8DDEB6BF1C8} = {496AEC9C-B704-43D9-AC7E-EB53F2BCE52D}
+		{58FF829B-C263-41E0-904D-1814E6688E0A} = {269C44AB-7C65-489C-8529-E4D93A835020}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5AEFF041-2899-4C34-9F42-AB297769B704}
