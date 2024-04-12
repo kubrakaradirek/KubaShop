@@ -12,9 +12,9 @@
     "KubaShop.Catalog": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false,//Programı çalıştırdığımız zaman false olması durumunda arka planda çalışacak fakat tarayıcıda açılmayacak anlamına gelir.
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7156;http://localhost:5111",
+      "applicationUrl": "https://localhost:9696",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

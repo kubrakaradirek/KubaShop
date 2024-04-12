@@ -45,7 +45,7 @@ namespace KubaShop.IdentityServer
                 ClientName="Kuba Shop Visitor User",
                 AllowedGrantTypes=GrantTypes.ClientCredentials,//İzin işleri
                 ClientSecrets={new Secret("kubashopsecret".Sha256())},
-                AllowedScopes={"CatalogReadPermission"}//Kapsamlar hangi işlemleri yapacağını belirler.
+                AllowedScopes={ "DiscountFullPermission" }//Kapsamlar hangi işlemleri yapacağını belirler.
             },
 
             //Manager

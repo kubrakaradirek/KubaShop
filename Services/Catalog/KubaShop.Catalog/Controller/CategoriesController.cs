@@ -1,11 +1,13 @@
 ﻿using KubaShop.Catalog.Dtos.CategoryDtos;
 using KubaShop.Catalog.Entities;
 using KubaShop.Catalog.Services.CategoryServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KubaShop.Catalog.Controller
 {
+    [Authorize]//Giriş zorunluluğu
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase

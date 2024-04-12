@@ -3,10 +3,19 @@ using KubaShop.Catalog.Services.ProductDetailServices;
 using KubaShop.Catalog.Services.ProductImageServices;
 using KubaShop.Catalog.Services.ProductServices;
 using KubaShop.Catalog.Settings;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using System.Reflection;//Assembyly=> Kullanmak için gerekli ad alanýdýr.
 
 var builder = WebApplication.CreateBuilder(args);
+
+//JWT 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.Authority = builder.Configuration["IdentityServerUrl"];//appsettinjsondan gelecek
+    opt.Audience = "ResourceCatalog";//sen geleceksin identity den appsettings yazdýðýmýz yetkilendirmede bununla çalýþacaksýn anlamýna gelir
+    opt.RequireHttpsMetadata = false;//appsettingjsonda https deðil http diye belirttiðimiz için
+});
 
 //AddScoped => Bana ICategoryService çaðrýldýðýnda categoryService sýnýfýnýda çaðýrmaya yarar.Const metotu için konfigürasyonlarý tamamlandý.
 builder.Services.AddScoped<ICategoryService, CategoryService>();
@@ -43,6 +52,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseAuthentication();
 
 app.UseAuthorization();
 

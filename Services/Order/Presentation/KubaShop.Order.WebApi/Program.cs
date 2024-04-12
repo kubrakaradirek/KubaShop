@@ -4,8 +4,17 @@ using KubaShop.Order.Application.Interfaces;
 using KubaShop.Order.Application.Services;
 using KubaShop.Order.Persistence.Context;
 using KubaShop.Order.Persistence.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//JWT 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.Authority = builder.Configuration["IdentityServerUrl"];
+    opt.Audience = "ResourceOrder";
+    opt.RequireHttpsMetadata = false;
+});
 
 //context sýnýfý
 builder.Services.AddDbContext<OrderContext>();
@@ -46,6 +55,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseAuthentication();
 
 app.UseAuthorization();
 

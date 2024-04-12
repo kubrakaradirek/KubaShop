@@ -1,10 +1,12 @@
 ﻿using KubaShop.Catalog.Dtos.ProductDtos;
 using KubaShop.Catalog.Services.ProductServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KubaShop.Catalog.Controller
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase

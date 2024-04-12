@@ -1,11 +1,13 @@
 ﻿using KubaShop.Order.Application.Features.CQRS.Commands.AddressCommands;
 using KubaShop.Order.Application.Features.CQRS.Handlers.AddressHandlers;
 using KubaShop.Order.Application.Features.CQRS.Queries.AddressQueries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KubaShop.Order.WebApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AddressesController : ControllerBase
