@@ -4,17 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:37320",
-      "sslPort": 44335
+      "applicationUrl": "http://localhost:65277",
+      "sslPort": 44396
     }
   },
   "profiles": {
-    "KubaShop.Cargo.WebApi": {
+    "KubaShop.Basket": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:9699",
+      "applicationUrl": "https://localhost:9601",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
