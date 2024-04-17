@@ -2,7 +2,7 @@
 
 namespace KubaShop.WebUI.Controllers
 {
-    public class DafaultController : Controller
+    public class ProductListController : Controller
     {
         public IActionResult Index()
         {
