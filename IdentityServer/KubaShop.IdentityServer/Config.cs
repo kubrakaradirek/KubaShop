@@ -67,7 +67,7 @@ namespace KubaShop.IdentityServer
             {
                 ClientId="KubaShopAdminId",
                 ClientName="Kuba Shop Admin User",
-                AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
+                AllowedGrantTypes=GrantTypes.ResourceOwnerPassword, //ResourceOwnerPassword
                 ClientSecrets={new Secret("kubashopsecret".Sha256())},
                 AllowedScopes={ "CatalogFullPermission", "CatalogReadPermission", "DiscountFullPermission", "OrderFullPermission","CargoFullPermission","BasketFullPermission",
                 IdentityServerConstants.LocalApi.ScopeName,
