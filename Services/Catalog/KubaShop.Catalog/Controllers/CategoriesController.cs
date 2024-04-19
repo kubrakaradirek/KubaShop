@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace KubaShop.Catalog.Controller
 {
-    [Authorize]//Giriş zorunluluğu
+    [AllowAnonymous]
+    //[Authorize]//Giriş zorunluluğu
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
@@ -30,6 +31,7 @@ namespace KubaShop.Catalog.Controller
             return Ok(values);
         }
         [HttpPost] // HttpPost: Web API'de Veri tabanınına yeni veri eklemek için kullanılır.
+        [AllowAnonymous]
         public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
         {
             //Mapleme işlemini yaptığımız için Category classını alıp newleyerek yeni nesne yaratmadık.Direkt dtoları kullandık.Atamalara da ihtiyacımız kalmadı mapleme bize bu işlemi yapıyor.
