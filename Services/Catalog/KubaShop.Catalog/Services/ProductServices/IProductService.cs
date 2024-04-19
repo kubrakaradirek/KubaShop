@@ -10,5 +10,6 @@ namespace KubaShop.Catalog.Services.ProductServices
         Task UpdateProductAsync(UpdateProductDto updateProductDto);
         Task DeleteProductAsync(string id);//mongodb de id string tanımlanıyor.
         Task<GetByIdProductDto> GetByIdProductAsync(string id);
+        Task<List<ResultProductsWithCategoryDto>> GetProductsWithCategoryAsync();
     }
 }
