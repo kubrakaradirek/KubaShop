@@ -9,5 +9,6 @@
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
         //appsettings bizim bağlantı işlemlerini gerçekleştireceğimiz konfigürasyondur. Ama burda crud işlemleri için her bir isme ihtiyacım olacak.
+        public string FeatureSliderCollectionName { get; set; }
     }
 }

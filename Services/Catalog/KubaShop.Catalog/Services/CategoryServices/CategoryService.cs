@@ -32,7 +32,7 @@ namespace KubaShop.Catalog.Services.CategoryServices
 
         public async Task<List<ResultCategoryDto>> GetAllCategoryAsync()
         {
-            var values=await _categoryCollection.Find(x=>true).ToListAsync(); // Burada x bütün hepsini getir anlamında
+            var values=await _categoryCollection.Find(x=>true).ToListAsync();// Burada x bütün hepsini getir anlamında
             return _mapper.Map<List<ResultCategoryDto>>(values);
         }
 

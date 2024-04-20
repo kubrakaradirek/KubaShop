@@ -5,7 +5,6 @@ namespace KubaShop.Catalog.Services.CategoryServices
     public interface ICategoryService
     {
         //Category crud işlemlerini metotların imzalarını tutacak
-
         Task<List<ResultCategoryDto>> GetAllCategoryAsync();  //Bütün verilerimizi getirecek metot
         Task CreateCategoryAsync(CreateCategoryDto createCategoryDto);
         Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto);

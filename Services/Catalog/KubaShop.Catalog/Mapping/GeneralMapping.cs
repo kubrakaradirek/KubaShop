@@ -1,6 +1,7 @@
 ﻿using Amazon.Runtime;
 using AutoMapper;
 using KubaShop.Catalog.Dtos.CategoryDtos;
+using KubaShop.Catalog.Dtos.FeatureSliderDtos;
 using KubaShop.Catalog.Dtos.ProductDetailDtos;
 using KubaShop.Catalog.Dtos.ProductDtos;
 using KubaShop.Catalog.Dtos.ProductImageDtos;
@@ -8,14 +9,14 @@ using KubaShop.Catalog.Entities;
 
 namespace KubaShop.Catalog.Mapping
 {
-    public class GeneralMapping:Profile //Profile AutoMapper kütüphanesini kullanır.
+    public class GeneralMapping:Profile//Profile AutoMapper kütüphanesini kullanır.
     {
         //Mappleme işleminde AutoMapper kullanmamızın amacı Entityler ile Dtoların etkileşimi için kullanılır. Const metodunda mappleme işlemi yapılır. Mappleme işleminin amacı entitylerinden nesne örnekleri oluşturmak yerine entitieslerin propertylerini dto daki propertylerle eşleştirecektir.
         public GeneralMapping()
         {
             //---------------   Category Mapping İşlemleri --------------
 
-            CreateMap<Category,ResultCategoryDto>().ReverseMap(); //ReverseMap:ResultCategoryDto ile Category ile mapleme de olabilir ondan kullanıldı.
+            CreateMap<Category,ResultCategoryDto>().ReverseMap();//ReverseMap:ResultCategoryDto ile Category ile mapleme de olabilir ondan kullanıldı.
             CreateMap<Category,CreateCategoryDto>().ReverseMap();
             CreateMap<Category,UpdateCategoryDto>().ReverseMap();
             CreateMap<Category,GetByIdCategoryDto>().ReverseMap();
@@ -41,9 +42,13 @@ namespace KubaShop.Catalog.Mapping
             CreateMap<ProductImage, CreateProductImageDto>().ReverseMap();
             CreateMap<ProductImage, UpdateProductImageDto>().ReverseMap();
             CreateMap<ProductImage, GetByIdProductImageDto>().ReverseMap();
-            
 
+            //---------------  FutureSlider Mapping İşlemleri --------------
 
+            CreateMap<FeatureSlider, ResultFeatureSliderDto>().ReverseMap();
+            CreateMap<FeatureSlider, CreateFeatureSliderDto>().ReverseMap();
+            CreateMap<FeatureSlider, UpdateFeatureSliderDto>().ReverseMap();
+            CreateMap<FeatureSlider, GetByIdFeatureSliderDto>().ReverseMap();
         }
     }
 }
