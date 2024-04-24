@@ -1,8 +1,10 @@
 using KubaShop.Catalog.Services.CategoryServices;
+using KubaShop.Catalog.Services.FeatureServices;
 using KubaShop.Catalog.Services.FeatureSliderServices;
 using KubaShop.Catalog.Services.ProductDetailServices;
 using KubaShop.Catalog.Services.ProductImageServices;
 using KubaShop.Catalog.Services.ProductServices;
+using KubaShop.Catalog.Services.SpecialOfferServices;
 using KubaShop.Catalog.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
@@ -24,6 +26,8 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductDetailService, ProductDetailService>();
 builder.Services.AddScoped<IProductImageService, ProductImageService>();
 builder.Services.AddScoped<IFeatureSliderService, FeatureSliderService>();
+builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
+builder.Services.AddScoped<IFeatureService, FeatureService>();
 
 //AutoMapper için gerekli konfigürasyonlar
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());

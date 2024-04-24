@@ -1,10 +1,12 @@
 ﻿using Amazon.Runtime;
 using AutoMapper;
 using KubaShop.Catalog.Dtos.CategoryDtos;
+using KubaShop.Catalog.Dtos.FeatureDtos;
 using KubaShop.Catalog.Dtos.FeatureSliderDtos;
 using KubaShop.Catalog.Dtos.ProductDetailDtos;
 using KubaShop.Catalog.Dtos.ProductDtos;
 using KubaShop.Catalog.Dtos.ProductImageDtos;
+using KubaShop.Catalog.Dtos.SpecialOfferDtos;
 using KubaShop.Catalog.Entities;
 
 namespace KubaShop.Catalog.Mapping
@@ -49,6 +51,20 @@ namespace KubaShop.Catalog.Mapping
             CreateMap<FeatureSlider, CreateFeatureSliderDto>().ReverseMap();
             CreateMap<FeatureSlider, UpdateFeatureSliderDto>().ReverseMap();
             CreateMap<FeatureSlider, GetByIdFeatureSliderDto>().ReverseMap();
+
+            //---------------  SpecialOffer Mapping İşlemleri --------------
+
+            CreateMap<SpecialOffer, ResultSpecialOfferDto>().ReverseMap();
+            CreateMap<SpecialOffer, CreateSpecialOfferDto>().ReverseMap();
+            CreateMap<SpecialOffer, UpdateSpecialOfferDto>().ReverseMap();
+            CreateMap<SpecialOffer, GetByIdSpecialOfferDto>().ReverseMap();
+
+            //---------------  Feature Mapping İşlemleri --------------
+
+            CreateMap<Feature, ResultFeatureDto>().ReverseMap();
+            CreateMap<Feature, CreateFeatureDto>().ReverseMap();
+            CreateMap<Feature, UpdateFeatureDto>().ReverseMap();
+            CreateMap<Feature, GetByIdFeatureDto>().ReverseMap();
         }
     }
 }
