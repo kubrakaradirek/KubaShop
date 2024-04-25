@@ -1,9 +1,11 @@
-﻿@model List<ResultCategoryDto>
+﻿@model List<ResultBrandDto>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
     int count = 0;
 }
+
 <section class="content container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -13,7 +15,8 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Kategori Adı</th>
+                                <th>Marka Adı</th>
+                                <th>Marka Görsel</th>
                                 <th>Sil</th>
                                 <th>Güncelle</th>
                             </tr>
@@ -24,18 +27,21 @@
                                 count++;
                                 <tr>
                                     <th scope="row">@count</th>
-                                    <td>@item.CategoryName</td>
-                                    <td><a href="/Admin/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
-                                    <td><a href="/Admin/Category/UpdateCategory/@item.CategoryId" class="btn btn-success">Güncelle</a></td>
+                                    <td>@item.BrandName</td>
+                                    <td><img src="@item.ImageUrl" style="width:50px; height:50px;"/> </td>
+                                    <td><a href="/Admin/Brand/DeleteBrand/@item.BrandId" class="btn btn-danger">Sil</a></td>
+                                    <td><a href="/Admin/Brand/UpdateBrand/@item.BrandId" class="btn btn-success">Güncelle</a></td>
                                 </tr>
                             }
                         </tbody>
                     </table>
-                    <td><a href="/Admin/Category/CreateCategory/" class="btn btn-primary">Yeni Kategori Girişi</a></td>
+                    <td><a href="/Admin/Brand/CreateBrand/" class="btn btn-primary">Yeni Marka Girişi</a></td>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
 
 

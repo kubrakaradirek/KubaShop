@@ -1,26 +1,83 @@
-﻿<div class="container-fluid py-5">
-    <div class="row px-xl-5">
-        <div class="col">
-            <div class="owl-carousel vendor-carousel">
-                <div class="bg-light p-4">
-                    <img src="~/images/adidas.png" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="~/images/columbia.png" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="~/images/hummel.jpg" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="~/images/ikea.png" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="~/images/koctas.jpg" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="~/images/nike.png" alt="">
-                </div>
+﻿@model List<ResultBrandDto>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+        .owl-carousel .owl-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .owl-carousel .owl-item {
+            margin-right: 20px; /* Boşluk için sağ kenar boşluğunu ayarlar */
+        }
+
+        /* Prev ve next butonları */
+        .owl-prev, .owl-next {
+            position: absolute;
+            top: 50%; /* Yatay eksende ortala */
+            transform: translateY(-50%);
+            color: black;
+            font-size: 24px;
+            z-index: 10;
+        }
+
+        .owl-prev {
+            left: 10px; /* Sol taraftan 10px uzaklık */
+        }
+
+        .owl-next {
+            right: 10px; /* Sağ taraftan 10px uzaklık */
+        }
+
+        /* Alt çizgi */
+        .owl-carousel {
+            margin-top: 40px; /* Üst boşluk */
+            margin-bottom: 40px; /* Alt boşluk */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="owl-carousel">
+        @foreach (var item in Model)
+        {
+            <div class="bg-light p-4" style="height:194.46px;width:194.46px; margin-bottom: 20px;">
+                <!-- Boşluk için alt kenar boşluğunu ayarlar -->
+                <img src="@item.ImageUrl" style="height:146.48px;width:146.48px" alt="">
             </div>
-        </div>
+        }
     </div>
-</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false, /* Prev ve next butonlarını gizler */
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

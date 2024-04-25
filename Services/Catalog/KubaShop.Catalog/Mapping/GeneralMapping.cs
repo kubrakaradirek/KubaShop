@@ -1,5 +1,6 @@
 ﻿using Amazon.Runtime;
 using AutoMapper;
+using KubaShop.Catalog.Dtos.BrandDtos;
 using KubaShop.Catalog.Dtos.CategoryDtos;
 using KubaShop.Catalog.Dtos.FeatureDtos;
 using KubaShop.Catalog.Dtos.FeatureSliderDtos;
@@ -73,6 +74,13 @@ namespace KubaShop.Catalog.Mapping
             CreateMap<OfferDiscount, CreateOfferDiscountDto>().ReverseMap();
             CreateMap<OfferDiscount, UpdateOfferDiscountDto>().ReverseMap();
             CreateMap<OfferDiscount, GetByIdOfferDiscountDto>().ReverseMap();
+
+            //---------------  Brand Mapping İşlemleri --------------
+
+            CreateMap<Brand, ResultBrandDto>().ReverseMap();
+            CreateMap<Brand, CreateBrandDto>().ReverseMap();
+            CreateMap<Brand, UpdateBrandDto>().ReverseMap();
+            CreateMap<Brand, GetByIdBrandDto>().ReverseMap();
         }
     }
 }
