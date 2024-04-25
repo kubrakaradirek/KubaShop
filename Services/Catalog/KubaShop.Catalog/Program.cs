@@ -1,6 +1,7 @@
 using KubaShop.Catalog.Services.CategoryServices;
 using KubaShop.Catalog.Services.FeatureServices;
 using KubaShop.Catalog.Services.FeatureSliderServices;
+using KubaShop.Catalog.Services.OfferDiscountServices;
 using KubaShop.Catalog.Services.ProductDetailServices;
 using KubaShop.Catalog.Services.ProductImageServices;
 using KubaShop.Catalog.Services.ProductServices;
@@ -28,6 +29,7 @@ builder.Services.AddScoped<IProductImageService, ProductImageService>();
 builder.Services.AddScoped<IFeatureSliderService, FeatureSliderService>();
 builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
 builder.Services.AddScoped<IFeatureService, FeatureService>();
+builder.Services.AddScoped<IOfferDiscountService, OfferDiscountService>();
 
 //AutoMapper için gerekli konfigürasyonlar
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());

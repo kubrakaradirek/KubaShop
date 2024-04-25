@@ -3,6 +3,7 @@ using AutoMapper;
 using KubaShop.Catalog.Dtos.CategoryDtos;
 using KubaShop.Catalog.Dtos.FeatureDtos;
 using KubaShop.Catalog.Dtos.FeatureSliderDtos;
+using KubaShop.Catalog.Dtos.OfferDiscountDtos;
 using KubaShop.Catalog.Dtos.ProductDetailDtos;
 using KubaShop.Catalog.Dtos.ProductDtos;
 using KubaShop.Catalog.Dtos.ProductImageDtos;
@@ -65,6 +66,13 @@ namespace KubaShop.Catalog.Mapping
             CreateMap<Feature, CreateFeatureDto>().ReverseMap();
             CreateMap<Feature, UpdateFeatureDto>().ReverseMap();
             CreateMap<Feature, GetByIdFeatureDto>().ReverseMap();
+
+            //---------------  OfferDiscount Mapping İşlemleri --------------
+
+            CreateMap<OfferDiscount, ResultOfferDiscountDto>().ReverseMap();
+            CreateMap<OfferDiscount, CreateOfferDiscountDto>().ReverseMap();
+            CreateMap<OfferDiscount, UpdateOfferDiscountDto>().ReverseMap();
+            CreateMap<OfferDiscount, GetByIdOfferDiscountDto>().ReverseMap();
         }
     }
 }
