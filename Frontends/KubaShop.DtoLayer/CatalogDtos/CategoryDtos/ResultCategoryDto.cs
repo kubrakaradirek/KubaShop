@@ -11,5 +11,6 @@ namespace KubaShop.DtoLayer.CatalogDtos.CategoryDtos
         //KubaShop.Catalog ==> CategoriesController ==> ICategoryService ==> ResultCategoryDto'daki kullandığımız propertylerden taşınmıştır
         public string CategoryId { get; set; }
         public string CategoryName { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

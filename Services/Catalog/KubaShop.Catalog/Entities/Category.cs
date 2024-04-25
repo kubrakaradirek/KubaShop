@@ -11,5 +11,6 @@ namespace KubaShop.Catalog.Entities
         [BsonRepresentation(BsonType.ObjectId)] // Id'nin benzersiz yani unique olduğunu belirtmek için BsonType.ObjectId kullanılır.
         public string CategoryId { get; set; }
         public string CategoryName { get; set; }
+        public string ImageUrl { get; set; }
     }
 }
