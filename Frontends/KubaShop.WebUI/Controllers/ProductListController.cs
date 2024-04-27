@@ -4,8 +4,9 @@ namespace KubaShop.WebUI.Controllers
 {
     public class ProductListController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
+            ViewBag.i = id;//Kategoriye gittiğinde kategorideki eşyalara götür
             return View();
         }
         public IActionResult ProductDetail()
