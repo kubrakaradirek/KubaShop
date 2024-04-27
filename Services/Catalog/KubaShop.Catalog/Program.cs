@@ -1,3 +1,4 @@
+using KubaShop.Catalog.Services.AboutServices;
 using KubaShop.Catalog.Services.BrandServices;
 using KubaShop.Catalog.Services.CategoryServices;
 using KubaShop.Catalog.Services.FeatureServices;
@@ -32,6 +33,7 @@ builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
 builder.Services.AddScoped<IFeatureService, FeatureService>();
 builder.Services.AddScoped<IOfferDiscountService, OfferDiscountService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
 
 //AutoMapper için gerekli konfigürasyonlar
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());

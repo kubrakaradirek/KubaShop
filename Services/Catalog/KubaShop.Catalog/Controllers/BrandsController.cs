@@ -33,19 +33,19 @@ namespace KubaShop.Catalog.Controllers
         public async Task<IActionResult> CreateBrand(CreateBrandDto createBrandDto)
         {
             await _brandService.CreateBrandAsync(createBrandDto);
-            return Ok("Yeni kategori başarıyla eklendi.");
+            return Ok("Marka başarıyla eklendi.");
         }
         [HttpDelete] 
         public async Task<IActionResult> DeleteBrand(string id)
         {
             await _brandService.DeleteBrandAsync(id);
-            return Ok("Kategori başarıyla silindi.");
+            return Ok("Marka başarıyla silindi.");
         }
         [HttpPut] 
         public async Task<IActionResult> UpdateBrand(UpdateBrandDto updateBrandDto)
         {
             await _brandService.UpdateBrandAsync(updateBrandDto);
-            return Ok("Kategori başarıyla güncellendi.");
+            return Ok("Marka başarıyla güncellendi.");
         }
     }
 }

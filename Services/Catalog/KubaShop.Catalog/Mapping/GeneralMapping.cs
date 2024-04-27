@@ -1,5 +1,6 @@
 ﻿using Amazon.Runtime;
 using AutoMapper;
+using KubaShop.Catalog.Dtos.AboutDtos;
 using KubaShop.Catalog.Dtos.BrandDtos;
 using KubaShop.Catalog.Dtos.CategoryDtos;
 using KubaShop.Catalog.Dtos.FeatureDtos;
@@ -13,21 +14,21 @@ using KubaShop.Catalog.Entities;
 
 namespace KubaShop.Catalog.Mapping
 {
-    public class GeneralMapping:Profile//Profile AutoMapper kütüphanesini kullanır.
+    public class GeneralMapping : Profile//Profile AutoMapper kütüphanesini kullanır.
     {
         //Mappleme işleminde AutoMapper kullanmamızın amacı Entityler ile Dtoların etkileşimi için kullanılır. Const metodunda mappleme işlemi yapılır. Mappleme işleminin amacı entitylerinden nesne örnekleri oluşturmak yerine entitieslerin propertylerini dto daki propertylerle eşleştirecektir.
         public GeneralMapping()
         {
             //---------------   Category Mapping İşlemleri --------------
 
-            CreateMap<Category,ResultCategoryDto>().ReverseMap();//ReverseMap:ResultCategoryDto ile Category ile mapleme de olabilir ondan kullanıldı.
-            CreateMap<Category,CreateCategoryDto>().ReverseMap();
-            CreateMap<Category,UpdateCategoryDto>().ReverseMap();
-            CreateMap<Category,GetByIdCategoryDto>().ReverseMap();
+            CreateMap<Category, ResultCategoryDto>().ReverseMap();//ReverseMap:ResultCategoryDto ile Category ile mapleme de olabilir ondan kullanıldı.
+            CreateMap<Category, CreateCategoryDto>().ReverseMap();
+            CreateMap<Category, UpdateCategoryDto>().ReverseMap();
+            CreateMap<Category, GetByIdCategoryDto>().ReverseMap();
 
             //---------------   Product Mapping İşlemleri --------------
 
-            CreateMap<Product,ResultProductDto>().ReverseMap();
+            CreateMap<Product, ResultProductDto>().ReverseMap();
             CreateMap<Product, CreateProductDto>().ReverseMap();
             CreateMap<Product, UpdateProductDto>().ReverseMap();
             CreateMap<Product, GetByIdProductDto>().ReverseMap();
@@ -35,14 +36,14 @@ namespace KubaShop.Catalog.Mapping
 
             //---------------   ProductDetail Mapping İşlemleri --------------
 
-            CreateMap<ProductDetail,ResultProductDetailDto>().ReverseMap();
+            CreateMap<ProductDetail, ResultProductDetailDto>().ReverseMap();
             CreateMap<ProductDetail, UpdateProductDetailDto>().ReverseMap();
             CreateMap<ProductDetail, CreateProductDetailDto>().ReverseMap();
             CreateMap<ProductDetail, GetByIdProductDetailDto>().ReverseMap();
 
             //---------------  ProductImage Mapping İşlemleri --------------
 
-            CreateMap<ProductImage,ResultProductImageDto>().ReverseMap();
+            CreateMap<ProductImage, ResultProductImageDto>().ReverseMap();
             CreateMap<ProductImage, CreateProductImageDto>().ReverseMap();
             CreateMap<ProductImage, UpdateProductImageDto>().ReverseMap();
             CreateMap<ProductImage, GetByIdProductImageDto>().ReverseMap();
@@ -81,6 +82,13 @@ namespace KubaShop.Catalog.Mapping
             CreateMap<Brand, CreateBrandDto>().ReverseMap();
             CreateMap<Brand, UpdateBrandDto>().ReverseMap();
             CreateMap<Brand, GetByIdBrandDto>().ReverseMap();
+
+            //---------------  About Mapping İşlemleri --------------
+
+            CreateMap<About, ResultAboutDto>().ReverseMap();
+            CreateMap<About, CreateAboutDto>().ReverseMap();
+            CreateMap<About, UpdateAboutDto>().ReverseMap();
+            CreateMap<About, GetByIdAboutDto>().ReverseMap();
         }
     }
 }
