@@ -11,7 +11,7 @@ namespace KubaShop.WebUI.ViewComponents.DefaultViewComponents
         {
             _httpClientFactory = httpClientFactory;
         }
-       
+
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();

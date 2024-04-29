@@ -22,6 +22,12 @@ namespace KubaShop.Catalog.Controller
             var values = await _productImageService.GetAllProductImageAsync();
             return Ok(values);
         }
+        [HttpGet("ProductImagesByProductId")]
+        public async Task<IActionResult> ProductImagesByProductId(string id)
+        {
+            var values = await _productImageService.GetByProductIdProductImageAsync(id);
+            return Ok(values);
+        }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductImageById(string id)
         {
@@ -32,7 +38,7 @@ namespace KubaShop.Catalog.Controller
         public async Task<IActionResult> CreateProductImage(CreateProductImageDto createProductImageDto)
         {
             await _productImageService.CreateProductImageAsync(createProductImageDto);
-            return Ok("Yeni ürün fotoğrafı başarıyla eklendi.");
+            return Ok("Ürün fotoğrafı başarıyla eklendi.");
         }
         [HttpDelete]
         public async Task<IActionResult> DeleteProductImage(string id)

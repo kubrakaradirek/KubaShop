@@ -1,8 +1,13 @@
-﻿namespace KubaShop.Catalog.Dtos.ProductImageDtos
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KubaShop.DtoLayer.CatalogDtos.ProductImageDtos
 {
-    public class ResultProductImageDto
+    public class CreateProductImageDto
     {
-        public string ProductImageId { get; set; } //Ürünlerin resimleri için 3 farklı resimle çalışacağız
         public string Image1 { get; set; }
         public string Image2 { get; set; }
         public string Image3 { get; set; }
